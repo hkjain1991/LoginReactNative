@@ -6,6 +6,7 @@ Text,
 View,
 ActivityIndicator,
 FlatList,
+Image,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import {useBackHandler} from '@react-native-community/hooks'
@@ -49,12 +50,11 @@ const [dataSet,setNames] = useState([])
 return (
     <SafeAreaView>
 {isLoading ? <ActivityIndicator size="large"/>: null}
-  {  
+ 
     <FlatList
     data={dataSet}
     renderItem={({item}) => <Item title={item.name} />}
     keyExtractor={item => item.id}/>
-  }
 </SafeAreaView>
 );
 }
