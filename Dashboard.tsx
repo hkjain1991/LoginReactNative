@@ -27,9 +27,9 @@ const Dashboard = () => {
         fetch('https://jsonplaceholder.typicode.com/users')
         .then(response=>response.json())
         .then(data=> {
-            data.map(
-                data1 => {console.log("from response " + data1.name)}
-            )
+            // data.map(
+            //     data1 => {console.log("from response " + data1.name)}
+            // )
             
             setNames(data)
         }
@@ -42,6 +42,7 @@ const Dashboard = () => {
 
     useEffect(
         () => {
+          console.log("api called")
             setIsLoading(true)
             getData()
         },[]

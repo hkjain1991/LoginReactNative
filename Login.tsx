@@ -32,9 +32,8 @@ const onPressLogin = () => {
         console.log(email + "   " + password + "::::::::::::")
         if(json.status == "ok" ) {
             navigation.navigate("Dashboard")
-        } else {
-            navigation.navigate("Dashboard")
-           // Alert.alert("Invalid userid or password")
+        } else { 
+           Alert.alert("Invalid userid or password")
         }
     }).catch(
        
